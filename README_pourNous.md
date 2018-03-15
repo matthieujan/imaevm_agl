@@ -13,6 +13,7 @@ Readme juste histoire qu'on se rappelle ce qu'on a fait.
 ### Check if IMA is enable and add&enable it if not
 
 If the path /sys/kernel/security/ima exists > IMA is already installed
+
 Else : Rebuilt the kernel with an additionnal .config file and write in it :
 ```
 CONFIG_INTEGRITY=y
@@ -22,7 +23,7 @@ CONFIG_IMA_AUDIT=y
 CONFIG_IMA_LSM_RULES=y
 ```
 
-Then, to enable just go into the /etc/default/grub configuration file and edit the line GRUB_CMDLINE_LINUX="" like this :
+Then, to enable it just go into the /etc/default/grub configuration file and edit the line GRUB_CMDLINE_LINUX="" like this :
 ```
 GRUB_CMDLINE_LINUX="ima_tcb"
 ```
@@ -32,16 +33,17 @@ Then update the file /boot/grub/grub.cfg with the command :
 sudo update-grub
 ```
 
-(Ici j'ai redémarrer mon ubuntu, je sais pas si c'est utile, à tester)
+If you try a reboot now, even if you didn't touch anything, you will probably have some violations. This appears because the default 
+IMA policy check all the files that root can read.
 
 ### Try a violation
 
-The default IMA policy check all the files that root can read, so you can choose any files permissions with the command
+Like said before, the default IMA policy check all the files that root can read, so you can choose any files with -r permission for root and edit it.
+You can check files permissions with the command
 ```
 ls -la
 ```
 
-Find a file that root can edit (ici j'ai pris /etc/mysql/mysql.cnf) and change what you want.
 Then restart your machine and go to /sys/kernel/security/ima and check the file violations, it should be increased by 1.
 
 ... not finished yet ............................................................................................................................
