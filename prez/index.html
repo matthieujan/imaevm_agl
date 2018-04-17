@@ -104,15 +104,41 @@
                     <li><strike>Runtime Measurement "file"</strike></li>
                 </section>
 			</section>
+            <section>
+                <h3>Issues with IMA/EVM</h3>
+                <section>
+                    <li>Not safe to operate</li>
+                    On iot hardware, if the system suffer a power outage, the hash may fail and brick
+                    the system
+                </section>
+                <section>
+                    <li>Not safe to protect</li>
+                    There is some ways (with sym and hard links) to bypass the integrity checks
+                </section>
+                <section>
+                    <li>Configuration hardware dependant</li>
+                    Without EVM, IMA is next to useless in security usage. However, the key installation
+                    requiring a safe way to store multiple and different keys (TPM), with harware solutions
+                    doesn't allow a generic solution in prod.
+                </section>
+                <section>
+                    <li>Experimental features</li>
+                    For the reasons above, and for maturity reasons, the features are explicit marked as
+                    deprecated in prod, and to use only in dev environment.
+                </section>
+			</section>
 			<section>
 				<section>
 					<h3>Conclusion : </h3>
+                    <li>Pas adapté aux systèmes embarqués</li>
+                    <li>Ni bonne sécurité</li>
+                    <li>Ni bonne sureté</li>
 				</section>
 				<section>
-					Bilan général :
-				</section>
-				<section>
-					Si on avait eu plus de temps :
+                    <h3>Problèmes rencontrés :</h3>
+                    <li>Recoupement des docs</li>
+                    <li>Manipulation de la feature</li>
+                    <li>Prise en main de Yocto</li>
 				</section>
 			</section>
 			<section>
