@@ -1,12 +1,12 @@
 <!doctype html>
 <html>
 
-<title>Grammar</title>
+<title>ENSIBS - IMA/EVM</title>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<meta name="description" content="A presentation of JJTree for the compiler course">
-	<meta name="author" content="Jan_Bezancon">
+	<meta name="description" content="A presentation of our work on IMA/EVM for AGL">
+	<meta name="author" content="Jan_Bezancon_Nard">
 
 	<title>Learn with Sadoul</title>
 
@@ -36,7 +36,7 @@
 		<div class="slides">
 			<!-- Intro-->
 			<section>
-				<h1>Projet S4</h1>
+				<h1>Projet S4 - AGL</h1>
 				<small>Félix Bezançon & Matthieu Jan & Aurélien Nard</small>
 			</section>
 			<section>
@@ -44,23 +44,65 @@
 				<ul>
 					<li>Objectifs</li>
 					<li>Organisation/Partage des tâches</li>
-					<li>Présentation de notre travail</li>
+					<li>Présentation de nos résultats</li>
 					<li>Conclusion</li>
 				</ul>
 			</section>
 			<section>
 				<h3>Objectifs :</h3>
+                <li>Etudier IMA/EVM</li>
+                <li>Tester sur AGL</li>
+                <li>Conclure sur la faisabilité</li>
 			</section>
 			<section>
-				<section>
-					<h3>Organisation :</h3>
-				</section>
-				<section>
-					<h3>Partage des tâches :</h3>
-				</section>
+                <h3>Partage des tâches :</h3>
+                <li>Félix : Etude documentaire</li>
+                <li>Aurélien : Utilisation de la feature</li>
+                <li>Matthieu : Integration dans AGL</li>
 			</section>
 			<section>
-				Présentation de ce qu'on a fait : 
+                <section>
+                    <h3>Etude documentaire: présentation d'IMA</h3>
+                    <li>Extended file properties</li>
+                    <li>Measurement : Live checking</li>
+                    <li>Appraisal : Offline checking</li>
+                    <li>Audit : Logging</li>
+                </section>
+                <section>
+                    <h3>Etude documentaire: présentation d'EVM</h3>
+                    <li>Extended file properties</li>
+                    <li>Checksum signing</li>
+                    <li>TPM to store keys</li>
+                </section>
+			</section>
+            <section>
+                <section>
+                    <h3>Activation IMA</h3>
+                    <li>Kernel config</li>
+                    <li>Boot parameter to define usage</li>
+                    <li>Policy file to define files checked</li>
+                </section>
+                <section>
+                    <h3>Utilisation IMA</h3>
+                    <li>Violation "file"</li>
+                    <li>ASCII Measurement "file"</li>
+                    <li>Runtime Measurement "file"</li>
+                </section>
+			</section>
+            <section>
+                <section>
+                    <h3>Activation IMA on AGL</h3>
+                    <h5>Blocking Issues</h5>
+                    <li>Kernel config</li>
+                    <li>Boot parameter to define usage</li>
+                    <li>Policy file to define files checked</li>
+                </section>
+                <section>
+                    <h3>Utilisation IMA on AGL</h3>
+                    <li><strike>Violation "file"</strike></li>
+                    <li><strike>ASCII Measurement "file"</strike></li>
+                    <li><strike>Runtime Measurement "file"</strike></li>
+                </section>
 			</section>
 			<section>
 				<section>
