@@ -33,6 +33,8 @@ More information about it in :
 - `https://sourceforge.net/p/linux-ima/wiki/Home/`
 - `https://wiki.strongswan.org/projects/strongswan/wiki/IMA`
 
+<div style="page-break-after: always;"></div>
+
 ## IMA Usage
 To use IMA, you can either use some of the developped but experimental tools (ima_measure) or simply by
 checking the files "violations" and "ASCII_runtime_measurements"_ (located in /sys/kernel/security/ima/).
@@ -67,6 +69,8 @@ To conclude, IMA should be  a great tool to check the integrity of the files of 
 but concretely, it's not yet mature enough to be exploited in production, even more on embedded
 project such as AGL.
 
+<div style="page-break-after: always;"></div>
+
 ## Source of informations
 - https://code.woboq.org/linux/linux/security/integrity/ima/ima_main.c.html
 - https://sourceforge.net/p/linux-ima/wiki/Home/
@@ -78,3 +82,8 @@ project such as AGL.
 ## Special thanks
 - IotBzh
 - Patrick Ohly
+
+## Contributors
+- Félix Bezançon
+- Aurélien Nard
+- Matthieu Jan
